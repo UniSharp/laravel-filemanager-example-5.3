@@ -10,4 +10,10 @@ init:
 	php artisan vendor:publish --tag=lfm_config
 
 test:
+	@echo "PSR-2 Testing"
+	./vendor/squizlabs/php_codesniffer/scripts/phpcs --standard=PSR2 vendor/unisharp/laravel-filemanager/src/controllers
+	./vendor/squizlabs/php_codesniffer/scripts/phpcs --standard=PSR2 vendor/unisharp/laravel-filemanager/src/Events
+	./vendor/squizlabs/php_codesniffer/scripts/phpcs --standard=PSR2 vendor/unisharp/laravel-filemanager/src/middlewares
+	./vendor/squizlabs/php_codesniffer/scripts/phpcs --standard=PSR2 vendor/unisharp/laravel-filemanager/src/traits
+	@echo "End-To-End Testing"
 	vendor/bin/phpunit vendor/unisharp/laravel-filemanager/tests/ApiTest.php
