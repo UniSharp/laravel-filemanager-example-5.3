@@ -8,6 +8,9 @@ init:
 	composer install
 	php artisan vendor:publish --tag=lfm_public
 	php artisan vendor:publish --tag=lfm_config
+	touch database/database.sqlite
+	php artisan migrate
+	php artisan db:seed
 
 test:
 	@echo "PSR-2 Testing"
