@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "97e60997f2bcd3e14e80c9a319f1fcec",
-    "content-hash": "39d99a333954f0a8277c3c4553501369",
+    "hash": "d98d4f214a0bf197e462be77ca61f53e",
+    "content-hash": "e6801f19f784866729ebb53f34fde28e",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -2067,16 +2067,16 @@
         },
         {
             "name": "unisharp/laravel-filemanager",
-            "version": "1.6.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UniSharp/laravel-filemanager.git",
-                "reference": "4ad58cb7117ab23dc2a96bdf748f120db4945433"
+                "reference": "0fa6cc4b1d4a97da5f9ed6e999f7412c7774c3f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UniSharp/laravel-filemanager/zipball/4ad58cb7117ab23dc2a96bdf748f120db4945433",
-                "reference": "4ad58cb7117ab23dc2a96bdf748f120db4945433",
+                "url": "https://api.github.com/repos/UniSharp/laravel-filemanager/zipball/0fa6cc4b1d4a97da5f9ed6e999f7412c7774c3f1",
+                "reference": "0fa6cc4b1d4a97da5f9ed6e999f7412c7774c3f1",
                 "shasum": ""
             },
             "require": {
@@ -2086,6 +2086,7 @@
             },
             "require-dev": {
                 "orchestra/testbench": "~3.0",
+                "phpspec/phpspec": "~2.1",
                 "phpunit/phpunit": "~4.8"
             },
             "suggest": {
@@ -2123,7 +2124,7 @@
                 "tinymce",
                 "upload"
             ],
-            "time": "2017-01-03 09:54:33"
+            "time": "2017-01-09 18:29:30"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -3748,7 +3749,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "unisharp/laravel-filemanager": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
