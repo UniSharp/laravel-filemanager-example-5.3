@@ -15,7 +15,7 @@ return [
     'middlewares'           => ['web', 'auth'],
 
     // Add prefix for routes
-    'prefix'           => 'laravel-filemanager',
+    'prefix'                => 'laravel-filemanager',
 
     // Allow multi_user mode or not.
     // If true, laravel-filemanager create private folders for each signed-in user.
@@ -26,14 +26,17 @@ return [
     // NOTE: make sure to use an unique field.
     'user_field'            => 'id',
 
+    'base_directory'        => 'public',
+
+    'images_folder_name'    => 'photos',
+    'files_folder_name'     => 'files',
+
     'shared_folder_name'    => 'shares',
     'thumb_folder_name'     => 'thumbs',
 
-    'images_dir'            => 'public/photos/',
-    'images_url'            => '/photos/',
-
-    'files_dir'             => 'public/files/',
-    'files_url'             => '/files/',
+    // When choosing a startup view you can fill either 'grid' or 'list'.
+    'images_startup_view'   => 'list',
+    'files_startup_view'    => 'list',
 
     // available since v1.3.0
     'valid_image_mimetypes' => [
