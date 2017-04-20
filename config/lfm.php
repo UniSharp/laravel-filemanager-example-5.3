@@ -25,10 +25,14 @@ return [
 
     // If true, private folders will be created for each signed-in user.
     'allow_multi_user' => true,
+    // If true, share folder will be created when allow_multi_user is true.
+    'allow_share_folder' => true,
 
-    // The database column to identify a user. Make sure the value is unique.
-    // Ex: When set to 'id', the private folder of user will be named as the user id.
-    'user_field' => 'id',
+    // Flexibla way to customize client folders accessibility
+    // Ex: The private folder of user will be named as the user id.
+    'user_field' => function() {
+        return auth()->user()->id;
+    },
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +58,7 @@ return [
 
     // The default display type for items.
     // Supported: "grid", "list"
-    'images_startup_view' => 'list',
+    'images_startup_view' => 'grid',
     'files_startup_view' => 'list',
 
     /*
@@ -72,15 +76,22 @@ return [
     // If true, non-alphanumeric folder name will be rejected.
     'alphanumeric_directory' => false,
 
+    // If true, the uploading file's size will be verified for over than max_image_size/max_file_size.
+    'should_validate_size' => false,
+
     'max_image_size' => 50000,
     'max_file_size' => 50000,
+
+    // If true, the uploading file's mime type will be valid in valid_image_mimetypes/valid_file_mimetypes.
+    'should_validate_mime' => false,
 
     // available since v1.3.0
     'valid_image_mimetypes' => [
         'image/jpeg',
         'image/pjpeg',
         'image/png',
-        'image/gif'
+        'image/gif',
+        'image/svg+xml',
     ],
 
     // available since v1.3.0
@@ -90,9 +101,19 @@ return [
         'image/pjpeg',
         'image/png',
         'image/gif',
+        'image/svg+xml',
         'application/pdf',
         'text/plain',
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Image / Folder Setting
+    |--------------------------------------------------------------------------
+    */
+
+    'thumb_img_width' => 200,
+    'thumb_img_height' => 200,
 
     /*
     |--------------------------------------------------------------------------

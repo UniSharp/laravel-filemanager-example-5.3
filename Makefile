@@ -13,6 +13,11 @@ init:
 	php artisan migrate
 	php artisan db:seed
 
+update:
+	composer update unisharp/laravel-filemanager
+	php artisan vendor:publish --tag=lfm_public --force
+	php artisan vendor:publish --tag=lfm_config --force
+
 test:
 	@echo "PSR-2 Testing"
 	./vendor/squizlabs/php_codesniffer/scripts/phpcs --standard=PSR2 vendor/unisharp/laravel-filemanager/src/controllers
