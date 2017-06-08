@@ -2066,16 +2066,16 @@
         },
         {
             "name": "unisharp/laravel-filemanager",
-            "version": "v1.7.4",
+            "version": "v1.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UniSharp/laravel-filemanager.git",
-                "reference": "741622fce79df3d77b6063239e3d95566db1810e"
+                "reference": "bc3d5975c19445ed5a64a80a186356a91af8d278"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UniSharp/laravel-filemanager/zipball/741622fce79df3d77b6063239e3d95566db1810e",
-                "reference": "741622fce79df3d77b6063239e3d95566db1810e",
+                "url": "https://api.github.com/repos/UniSharp/laravel-filemanager/zipball/bc3d5975c19445ed5a64a80a186356a91af8d278",
+                "reference": "bc3d5975c19445ed5a64a80a186356a91af8d278",
                 "shasum": ""
             },
             "require": {
@@ -2126,7 +2126,7 @@
                 "tinymce",
                 "upload"
             ],
-            "time": "2017-04-19T20:35:43+00:00"
+            "time": "2017-04-28T06:34:29+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
