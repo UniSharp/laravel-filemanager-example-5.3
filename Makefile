@@ -10,8 +10,7 @@ init:
 	php artisan vendor:publish --tag=lfm_public
 	php artisan vendor:publish --tag=lfm_config
 	touch database/database.sqlite
-	php artisan migrate
-	php artisan db:seed
+	php artisan migrate:refresh --seed
 
 update:
 	composer update unisharp/laravel-filemanager
