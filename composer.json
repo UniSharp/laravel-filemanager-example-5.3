@@ -1,27 +1,9 @@
 {
-    "name": "unisharp/laravel-filemanager-example-5.3",
-    "description": "A file upload/editor intended for use with Laravel 5 and CKEditor / TinyMCE",
-    "keywords": [
-        "filemanager",
-        "laravel",
-        "ckeditor",
-        "tinymce",
-        "upload",
-        "file",
-        "manager",
-        "image"
-    ],
-    "authors": [
-        {
-        "name": "Trevor Sawler",
-        "email": "trevor.sawler@gmail.com"
-        },
-        {
-        "name": "UniSharp Ltd.",
-        "email": "unisharp-service@unisharp.com"
-        }
-    ],
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
     "license": "MIT",
+    "type": "project",
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
@@ -34,10 +16,6 @@
         "phpunit/phpunit": "~5.0",
         "symfony/css-selector": "3.1.*",
         "symfony/dom-crawler": "3.1.*"
-    },
-    "suggest": {
-        "ext-gd": "to use GD library based image processing.",
-        "ext-imagick": "to use Imagick based image processing."
     },
     "autoload": {
         "classmap": [
@@ -53,8 +31,15 @@
         ]
     },
     "scripts": {
+        "post-root-package-install": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ],
         "post-install-cmd": [
-            "make init"
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize"
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
