@@ -7,8 +7,8 @@ init:
 		php artisan key:generate;\
 	fi
 
-	php artisan vendor:publish --tag=lfm_public
-	php artisan vendor:publish --tag=lfm_config
+	php artisan vendor:publish --tag=lfm_public --force
+	php artisan vendor:publish --tag=lfm_config --force
 	touch database/database.sqlite
 	php artisan migrate:refresh --seed
 
