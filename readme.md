@@ -8,4 +8,4 @@ This project already integrated [unisharp/laravel-filemanager](https://github.co
 4. Go to your browser and visit `localhost:8000/laravel-filemanager/demo`
 
 ## Notes for developers
-Remeber to run `make test`, make sure all tests are passed before sending new pull requests.
+Remember to run `make test`, make sure all tests are passed before sending new pull requests.
